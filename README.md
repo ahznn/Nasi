@@ -9,16 +9,14 @@ You will do MOST OF THE THINGS in `pwsh`, How do you do/open it?
 
 After that
 
-- Type `pwsh`, then enter.
+- Type `pwsh` in there, then enter.
 
-Now you should be in `pwsh`
+Now you should be in `pwsh`, IF you don't have `pwsh` Run:
 
-if not
-
-Run
 ```powershell
 winget install -e Microsoft.PowerShell
 ```
+Reopen `cmd` then type `pwsh`. I think now you should be good.
 
 ## scoop
 
@@ -37,13 +35,47 @@ You can click link above for official guide, or just do the following.
 
 You will need:
 - [`python`](https://www.python.org/)
+
+The list below is Included in [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) section, so you can ignore it for now.
+
 - [`pywal6`](https://github.com/eylles/pywal16)
 - [`colorthief`](https://github.com/fengsp/color-thief-py)
 - [`colorz`](https://github.com/metakirby5/colorz)(does not install on arm64 versions of Python on Windows)
 - [`haishoku`](https://github.com/LanceGin/haishoku)
-Also
-- 
+- [`imagemagick`](https://imagemagick.org/#gsc.tab=0)
 
-### Python
+These 2 Below are Optional.
 
-Install python
+- [`Go`](https://go.dev/doc/install)
+- [`schemer2`](https://github.com/thefryscorer/schemer2)
+
+### Installing Python
+
+Install python by typing:
+```powershell
+winget install Python.Python.3.13
+```
+Reopen your `cmd`, type/run `pwsh` again, then type `py` to check if Python is installed.
+
+If it says no such thing exist, you need to add it to your Environment Variables.
+
+### Installing winwal / pywal16
+
+Now we're using `Python`/`py`.
+
+To install [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) you need to install.
+
+- [`pywal6`](https://github.com/eylles/pywal16) 
+```powershell
+python -m pip install pywal16
+```
+- [`colorthief`](https://github.com/fengsp/color-thief-py)
+```powershell
+python -m pip install colorthief 
+```
+- [`colorz`](https://github.com/metakirby5/colorz)(does not install on arm64 versions of Python on Windows)
+```powershell
+python -m pip install colorz
+```
+- [`haishoku`](https://github.com/LanceGin/haishoku)
+- [`imagemagick`](https://imagemagick.org/#gsc.tab=0)
