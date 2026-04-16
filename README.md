@@ -78,4 +78,10 @@ python -m pip install colorthief
 python -m pip install colorz
 ```
 - [`haishoku`](https://github.com/LanceGin/haishoku)
+```powershell
+python -m pip install haishoku
+```
 - [`imagemagick`](https://imagemagick.org/#gsc.tab=0)
+```powershell
+winget install imagemagick.imagemagick
+```
