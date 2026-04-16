@@ -59,7 +59,7 @@ Reopen your `cmd`, type/run `pwsh` again, then type `py` to check if Python is i
 
 If it says no such thing exist, you need to add it to your Environment Variables.
 
-### Installing winwal / pywal16
+### Installing winwal Dependencies
 
 Now we're using `Python`/`py`.
 
@@ -93,3 +93,23 @@ Also For [schemer2](https://github.com/thefryscorer/schemer2), install [Go](http
 ```powershell
 go install github.com/thefryscorer/schemer2@latest
 ```
+### Installing winwal
+
+Clone [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) repository by typing/running:
+```powershell
+git clone https://github.com/scaryrawr/winwal
+```
+Open your `pwsh` profile by typing:
+```powershell
+code $profile
+```
+It should open your `powershell` profile on `notepad`/`vsc`, put this in:
+```powershell
+Import-Module [YOUR WINWAL LOCATION] (it should be in C:\Windows\System32\winwal\winwal.psm1)
+Update-WalTheme -Backend haishoku
+```
+You can use other backend if you want, like [`colorthief`](https://github.com/fengsp/color-thief-py), [`colorz`](https://github.com/metakirby5/colorz) or something.
+
+That's it, you finished the first step.
+
+## 
