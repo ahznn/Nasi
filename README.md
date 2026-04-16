@@ -105,11 +105,14 @@ code $profile
 ```
 It should open your `powershell` profile on `notepad`/`vsc`, put this in:
 ```powershell
-Import-Module [YOUR WINWAL LOCATION] (it should be in C:\Windows\System32\winwal\winwal.psm1)
+Import-Module C:\Windows\System32\winwal\winwal.psm1
 Update-WalTheme -Backend haishoku
 ```
+
+Put your directory where [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) is stored, if  `Import-Module` default directory doesn't work. It should be working though.
+
 You can use other backend if you want, like [`colorthief`](https://github.com/fengsp/color-thief-py), [`colorz`](https://github.com/metakirby5/colorz) or something.
 
 That's it, you finished the first step.
 
-# 
+# YASB
