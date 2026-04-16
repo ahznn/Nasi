@@ -65,23 +65,31 @@ Now we're using `Python`/`py`.
 
 To install [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) you need to install.
 
-- [`pywal6`](https://github.com/eylles/pywal16) 
+[`pywal6`](https://github.com/eylles/pywal16) 
 ```powershell
 python -m pip install pywal16
 ```
-- [`colorthief`](https://github.com/fengsp/color-thief-py)
+[`colorthief`](https://github.com/fengsp/color-thief-py)
 ```powershell
 python -m pip install colorthief 
 ```
-- [`colorz`](https://github.com/metakirby5/colorz)(does not install on arm64 versions of Python on Windows)
+[`colorz`](https://github.com/metakirby5/colorz)(does not install on arm64 versions of Python on Windows)
 ```powershell
 python -m pip install colorz
 ```
-- [`haishoku`](https://github.com/LanceGin/haishoku)
+[`haishoku`](https://github.com/LanceGin/haishoku)
 ```powershell
 python -m pip install haishoku
 ```
-- [`imagemagick`](https://imagemagick.org/#gsc.tab=0)
+[`imagemagick`](https://imagemagick.org/#gsc.tab=0)
 ```powershell
 winget install imagemagick.imagemagick
+```
+
+All of this Runs/Typed on `pwsh`.
+
+Also For [schemer2](https://github.com/thefryscorer/schemer2), install [Go](https://golang.org/doc/install) and run:
+
+```powershell
+go install github.com/thefryscorer/schemer2@latest
 ```
