@@ -25,9 +25,9 @@ Now [`scoop`](https://scoop.sh/), you can click that link and follow the guide o
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 ```
-Just Copy text/code above and paste it on your `pwsh`, then enter.
+Just Copy text/code above, paste it on your `pwsh`, then enter.
 
-## winwal / pywal16
+# winwal / pywal16
 
 [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md)
 
@@ -49,7 +49,7 @@ These 2 Below are Optional.
 - [`Go`](https://go.dev/doc/install)
 - [`schemer2`](https://github.com/thefryscorer/schemer2)
 
-### Installing Python
+## Installing Python
 
 Install python by typing:
 ```powershell
@@ -59,7 +59,7 @@ Reopen your `cmd`, type/run `pwsh` again, then type `py` to check if Python is i
 
 If it says no such thing exist, you need to add it to your Environment Variables.
 
-### Installing winwal Dependencies
+## Installing winwal Dependencies
 
 Now we're using `Python`/`py`.
 
@@ -112,4 +112,4 @@ You can use other backend if you want, like [`colorthief`](https://github.com/fe
 
 That's it, you finished the first step.
 
-## 
+# 
