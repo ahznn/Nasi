@@ -63,7 +63,7 @@ If it says no such thing exist, you need to add it to your Environment Variables
 
 Now we're using `Python`/`py`.
 
-To install [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) you need to install.
+To install and use [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) you need to install.
 
 [`pywal6`](https://github.com/eylles/pywal16) 
 ```powershell
