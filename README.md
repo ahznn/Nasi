@@ -93,7 +93,7 @@ Also For [schemer2](https://github.com/thefryscorer/schemer2), install [Go](http
 ```powershell
 go install github.com/thefryscorer/schemer2@latest
 ```
-### Installing winwal
+## Installing winwal
 
 Clone [`winwal`](https://github.com/scaryrawr/winwal/blob/main/README.md) repository by typing/running:
 ```powershell
