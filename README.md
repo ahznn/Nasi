@@ -251,11 +251,11 @@ You can use `Rainmeter` skin in this repository, by:
 
 Downloading `Rainmeter` folder. Extract.
 
-Then put `Bouquet Suite II (More)` to Your `Rainmeter` folder like mentioned.
+Then put `Bouquet Suite II` to Your `Rainmeter` folder like mentioned.
 
 ### NOTE
 
-Inside the `Rainmeter` Skin / `Bouquet Suite II (More)` there is `Scripts` folder inside `@Resources`.
+Inside the `Rainmeter` Skin / `Bouquet Suite II` there is `Scripts` folder inside `@Resources`.
 
 That `Scripts` folder contain scripts that sync you `yasb` and `Rainmeter`.
 
