@@ -105,7 +105,7 @@ winget install imagemagick.imagemagick
 
 All of this Runs/Typed on `pwsh`.
 
-Also For [schemer2](https://github.com/thefryscorer/schemer2), install [Go](https://golang.org/doc/install) and run:
+Also For [`schemer2`](https://github.com/thefryscorer/schemer2), install [`Go`](https://golang.org/doc/install) and run:
 
 ```powershell
 go install github.com/thefryscorer/schemer2@latest
@@ -134,9 +134,23 @@ That's it, you finished the first step.
 
 # YASB
 
-To install [`yasb`](https://github.com/amnweb/yasb), you can refer to [`yasb installation`](https://github.com/amnweb/yasb/wiki/Installation) guide or install it using scoop by runninng.
+To install [`yasb`](https://github.com/amnweb/yasb), you can refer to [`yasb installation`](https://github.com/amnweb/yasb/wiki/Installation) guide 
+
+or
+
+install it using `scoop` by runninng.
 ```powershell
 scoop bucket add extras
 scoop install extras/yasb
 ```
 on `pwsh`
+
+That's it
+
+## YASB CONFIG
+`yasb` configuration is located at
+
+```
+C:\Users\[YourName]\.config\yasb
+```
+
