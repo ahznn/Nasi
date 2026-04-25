@@ -191,7 +191,7 @@ menu_list:
 image_path: "C:\\Users\\[YourName]\\Documents\\Wallpaper"
 ```
 
-this is where your wallpaper is going. 
+This is where your wallpaper is going. 
 
 You could change it to something like 
 
@@ -208,6 +208,18 @@ run_after: [
         cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !RefreshApp,
         cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\accenttheme.ps1",
         cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\komorebi.ps1"
+      ]
+```
+This is `pywal6` color sync scripts.
+
+You could change it to something like
+```
+run_after: [
+        "cmd.exe /c start /min pwsh -WindowStyle Hidden -Command Update-WalTheme -Backend haishoku",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Scripts\convert.ps1",
+        cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !RefreshApp,
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Scriptss\accenttheme.ps1",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Scripts\komorebi.ps1"
       ]
 ```
 
