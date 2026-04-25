@@ -154,3 +154,16 @@ That's it
 C:\Users\[YourName]\.config\yasb
 ```
 
+You can use this Repository config, by downloading `config.yaml` and `styles.css` inside `YASB`/`YASB Alt` Folder in this Repository.
+
+Then paste it in Your `yasb` configuration folder like mentioned.
+
+### ============== NOTE ============== 
+ 
+# Rainmeter
+
+Install [`Rainnmeter`](https://www.rainmeter.net/) by going to.
+
+[`https://www.rainmeter.net/`](https://www.rainmeter.net/)
+
+Install it like normal.
