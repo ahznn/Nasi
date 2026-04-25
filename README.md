@@ -35,6 +35,10 @@ winget install -e --id Git.Git
 
 on `pwsh` like mentioned
 
+### VSCode
+
+- Install [`VSCode`](https://code.visualstudio.com/), from [`https://code.visualstudio.com/`](https://code.visualstudio.com/).
+
 ## scoop
 
 Now [`scoop`](https://scoop.sh/), you can click that link and follow the guide or install it by typing (this code below, on `pwsh`):
@@ -159,6 +163,8 @@ You can use this Repository config, by downloading `config.yaml` and `styles.css
 Then paste it in Your `yasb` configuration folder like mentioned.
 
 ### ============== NOTE ============== 
+
+
  
 # Rainmeter
 
