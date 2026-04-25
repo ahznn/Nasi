@@ -24,7 +24,14 @@ Reopen `cmd` then type `pwsh`. I think now you should be good.
 
 ### Git
 
-- Install [`git`](https://git-scm.com/install/windows), from official site or just click [`git`](https://git-scm.com/install/windows).
+- Install [`git`](https://git-scm.com/install/windows), from official site [`git`](https://git-scm.com/install/windows).
+
+or
+
+Run
+``` powershell
+winget install -e --id Git.Git
+```
 
 ## scoop
 
