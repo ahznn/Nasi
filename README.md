@@ -39,6 +39,8 @@ on `pwsh` like mentioned
 
 - Install [`VSCode`](https://code.visualstudio.com/), from [`https://code.visualstudio.com/`](https://code.visualstudio.com/).
 
+Just Install It like normal.
+
 ## scoop
 
 Now [`scoop`](https://scoop.sh/), you can click that link and follow the guide or install it by typing (this code below, on `pwsh`):
@@ -152,17 +154,19 @@ on `pwsh`
 That's it
 
 ## YASB CONFIG
-`yasb` configuration is located at
+`yasb` configuration should be located at
 
 ```
 C:\Users\[YourName]\.config\yasb
 ```
 
-You can use this Repository config, by downloading `config.yaml` and `styles.css` inside `YASB`/`YASB Alt` Folder in this Repository.
+You can use config from this repository, by downloading `config.yaml` and `styles.css` inside `YASB`/`YASB Alt` folder.
 
 Then paste it in Your `yasb` configuration folder like mentioned.
 
 ### ============== NOTE ============== 
+
+You will NEED to change Folder Address in `config.yaml` to Your Own Folder.
 
 
  
@@ -173,3 +177,16 @@ Install [`Rainnmeter`](https://www.rainmeter.net/) by going to.
 [`https://www.rainmeter.net/`](https://www.rainmeter.net/)
 
 Install it like normal.
+
+## Rainmeter CONFIG
+
+`Rainmeter` skin should be located at
+```
+C:\Users\[YourName]\Documents\Rainmeter
+```
+
+You can use `Rainmeter` skin in this repository, by: 
+
+- Downloading `Rainmeter` folder.
+- Extract
+- Copy `Bouquet Suite II (More)` to Your `Rainmeter Skins` folder like mentioned.
