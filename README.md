@@ -253,10 +253,12 @@ Downloading `Rainmeter` folder. Extract.
 
 Then put `Bouquet Suite II` to Your `Rainmeter` folder like mentioned.
 
-### NOTE
+## NOTE
 
 Inside the `Rainmeter` Skin / `Bouquet Suite II` there is `Scripts` folder inside `@Resources`.
 
 That `Scripts` folder contain scripts that sync you `yasb` and `Rainmeter`.
 
 You can move it to somewhere else but, you would need to change the folder address inside `yasb` `config.yaml`.
+
+Also `Frame` annd `Gif` folder is empty because the file is too big, it is supposedly where you put your `*gif` file, refer to [`Rainmeter Gif`](https://docs.rainmeter.net/tips/animated-gif-files/) for more information.
