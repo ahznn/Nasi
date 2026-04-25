@@ -133,3 +133,10 @@ You can use other backend if you want, like [`colorthief`](https://github.com/fe
 That's it, you finished the first step.
 
 # YASB
+
+To install [`yasb`](https://github.com/amnweb/yasb), you can refer to [`yasb installation`](https://github.com/amnweb/yasb/wiki/Installation) guide or install it using scoop by runninng.
+```powershell
+scoop bucket add extras
+scoop install extras/yasb
+```
+on `pwsh`
