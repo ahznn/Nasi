@@ -166,10 +166,25 @@ Then paste it in Your `yasb` configuration folder like mentioned.
 
 ### ============== NOTE ============== 
 
-You will NEED to change Folder Address in `config.yaml` to Your Own Folder.
+You will NEED to change Folder Address in `config.yaml` and `styles.css` to Your Own Folder.
+
+You can open `config.yaml` and `styles.css` file by double-clicking it
+
+### WHAT YOU NEED TO CHANGE. `config.yaml`:
+
+- menu_list
+
+`CTRL+F` to search `menu_list`.
+```
+menu_list:
+      - { title: "Home", path: "~" }
+      - { title: "Downloads", path: "C:\\Users\\[YourName]\\Downloads"}
+      - { title: "Documents", path: "C:\\Users\\[YourName]\\Documents"}
+      - { title: "Pictures", path: "C:\\Users\\[YourName]\\Pictures"}
+      - { title: "Videos", path: "C:\\Users\\[YourName]\\Videos"}
+```
 
 
- 
 # Rainmeter
 
 Install [`Rainnmeter`](https://www.rainmeter.net/) by going to.
