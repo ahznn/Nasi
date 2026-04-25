@@ -182,11 +182,19 @@ Install it like normal.
 
 `Rainmeter` skin should be located at
 ```
-C:\Users\[YourName]\Documents\Rainmeter
+C:\Users\[YourName]\Documents\Rainmeter\Skins
 ```
 
 You can use `Rainmeter` skin in this repository, by: 
 
-- Downloading `Rainmeter` folder.
-- Extract
-- Copy `Bouquet Suite II (More)` to Your `Rainmeter Skins` folder like mentioned.
+Downloading `Rainmeter` folder. Extract.
+
+Then put `Bouquet Suite II (More)` to Your `Rainmeter` folder like mentioned.
+
+### ============== NOTE ============== 
+
+Inside the `Rainmeter` Skin / `Bouquet Suite II (More)` there is `Scripts` folder inside `@Resources`.
+
+That `Scripts` folder contain scripts that sync you `yasb` and `Rainmeter`.
+
+You can move it to somewhere else but, you would need to change the folder address inside `yasb` `config.yaml`.
