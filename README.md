@@ -261,6 +261,4 @@ That `Scripts` folder contain scripts that sync you `yasb` and `Rainmeter`.
 
 You can move it to somewhere else but, you would need to change the folder address inside `yasb` `config.yaml`.
 
-Also `Frame` annd `Gif` folder is empty because the file is too big, it is supposedly where you put your `*gif` file.
-
-Refer to [`Rainmeter Gif`](https://docs.rainmeter.net/tips/animated-gif-files/) for more information.
+Also `Frame` annd `Gif` folder is empty because the file is too big, it is supposedly where you put your `*gif` file. Refer to [`Rainmeter Gif`](https://docs.rainmeter.net/tips/animated-gif-files/) for more information.
