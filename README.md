@@ -204,15 +204,15 @@ image_path: "D:\\Wallpaper"
 ```
 run_after: [
         "cmd.exe /c start /min pwsh -WindowStyle Hidden -Command Update-WalTheme -Backend haishoku",
-        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\convert.ps1",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\convert.ps1",
         cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !RefreshApp,
-        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\accenttheme.ps1",
-        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\komorebi.ps1"
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\accenttheme.ps1",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\komorebi.ps1"
       ]
 ```
 This is `pywal6` color sync scripts.
 
-You could change it to something like
+You can change it to something like
 ```
 run_after: [
         "cmd.exe /c start /min pwsh -WindowStyle Hidden -Command Update-WalTheme -Backend haishoku",
@@ -222,6 +222,15 @@ run_after: [
         cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "D:\Scripts\komorebi.ps1"
       ]
 ```
+
+i don't know if it will work though.
+
+### WHAT YOU NEED TO CHANGE. `styles.css` :
+
+```
+@import url("C:/Users/[YourName]/.cache/wal/colors.css");
+```
+It's on the very top.
 
 # Rainmeter
 
