@@ -164,7 +164,7 @@ You can use config from this repository, by downloading `config.yaml` and `style
 
 Then paste it in Your `yasb` configuration folder like mentioned.
 
-### ============== NOTE ============== 
+## NOTE
 
 You will NEED to change Folder Address in `config.yaml` and `styles.css` to Your Own Folder.
 
@@ -172,9 +172,10 @@ You can open `config.yaml` and `styles.css` file by double-clicking it
 
 ### WHAT YOU NEED TO CHANGE. `config.yaml`:
 
-- menu_list
+`CTRL+F` to search: 
 
-`CTRL+F` to search `menu_list`.
+- `menu_list`.
+
 ```
 menu_list:
       - { title: "Home", path: "~" }
@@ -184,6 +185,31 @@ menu_list:
       - { title: "Videos", path: "C:\\Users\\[YourName]\\Videos"}
 ```
 
+- `image_path`
+
+```
+image_path: "C:\\Users\\[YourName]\\Documents\\Wallpaper"
+```
+
+this is where your wallpaper is going. 
+
+You could change it to something like 
+
+```
+image_path: "D:\\Wallpaper"
+```
+
+- `run_after`
+
+```
+run_after: [
+        "cmd.exe /c start /min pwsh -WindowStyle Hidden -Command Update-WalTheme -Backend haishoku",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\convert.ps1",
+        cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !RefreshApp,
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\accenttheme.ps1",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\[YourNme]\Documents\Rainmeter\Skins\Bouquet Suite II (More)\@Resources\Scripts\komorebi.ps1"
+      ]
+```
 
 # Rainmeter
 
@@ -206,7 +232,7 @@ Downloading `Rainmeter` folder. Extract.
 
 Then put `Bouquet Suite II (More)` to Your `Rainmeter` folder like mentioned.
 
-### ============== NOTE ============== 
+### NOTE
 
 Inside the `Rainmeter` Skin / `Bouquet Suite II (More)` there is `Scripts` folder inside `@Resources`.
 
