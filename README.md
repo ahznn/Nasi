@@ -5,6 +5,10 @@ i did not make any of the app and customization.
 
 You will do MOST OF THE THINGS in `pwsh`, How do you do/open it? 
 
+### pwsh
+
+- Install/Get `pwsh` on microsoft store. 
+
 - Open `cmd`; open it by typing `cmd` in windows search, then Run as Administrator.
 
 After that
@@ -17,6 +21,10 @@ Now you should be in `pwsh`, IF you don't have `pwsh` Run:
 winget install -e Microsoft.PowerShell
 ```
 Reopen `cmd` then type `pwsh`. I think now you should be good.
+
+### Git
+
+- Install [`git`](https://git-scm.com/install/windows), from official site or just click [`git`](https://git-scm.com/install/windows).
 
 ## scoop
 
