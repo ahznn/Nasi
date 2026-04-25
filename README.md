@@ -33,6 +33,8 @@ Run
 winget install -e --id Git.Git
 ```
 
+on `pwsh` like mentioned
+
 ## scoop
 
 Now [`scoop`](https://scoop.sh/), you can click that link and follow the guide or install it by typing (this code below, on `pwsh`):
