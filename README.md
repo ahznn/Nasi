@@ -1,6 +1,18 @@
 # Nasi
 i did not make any of the app and customization. 
 
+YASB bar is made by:
+darrenlingters3512 on YouTube.
+
+Rainmeter Widget is made by:
+Eldog-02 on DeviantArt
+
+pywal16 (color palette generator) is made by:
+eylles on GitHub
+
+winwal (pywal16 wrapper) is made by:
+scaryrawr on GitHub
+
 # Pre-Installation
 
 You will do MOST OF THE THINGS in `pwsh`, How do you do/open it? 
