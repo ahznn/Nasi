@@ -135,6 +135,9 @@
 .home-menu {
     background-color: var(--bg);
     margin-left: 6px;
+    border-color: var(--border);
+    border-radius: 5px;
+    border: 2px solid var(--border);
 }
 .home-menu .menu-item {
     padding: 8px 10px 10px 8px;
@@ -144,11 +147,19 @@
     margin-left: 6px;
 }
 .home-menu .menu-item:hover {
-    background-color: var(--border);
     color: var(--Text);
-    margin-left: 6px;
+    background-color: var(--bg);
+    border: 2px solid var(--border);
+    border-color: var(--border);
+    border-radius: 5px;
+    
 }
 
+.home-menu .separator {
+    max-height: 2px;
+    background-color:var(--border);
+    margin-left: 6px;
+}
 
 .komorebi-active-layout .label {
     font-size: 12px;

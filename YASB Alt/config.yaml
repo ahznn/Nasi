@@ -34,8 +34,11 @@ bars:
       left:
         [
           "win_button",
+          "lines",
           "komorebi_workspaces",
           "komorebi_active_layout",
+          "lines",
+          "home",
           "lines",
           "clock",
         ]
@@ -60,17 +63,17 @@ widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "家"
+      label: ">.<"
       menu_list:
       - { title: "Home", path: "~" }
-      - { title: "Downloads", path: "C:\\Users\\Hamuko\\Downloads"}
+      - { title: "Downloads", path: "D:\\Download D"}
       - { title: "Documents", path: "C:\\Users\\Hamuko\\Documents"}
-      - { title: "Pictures", path: "C:\\Users\\Hamuko\\Pictures"}
-      - { title: "Videos", path: "C:\\Users\\Hamuko\\Videos"}
-      system_menu: false
+      - { title: "yt-dlp", path: "D:\\yt-dlp"}
+      - { title: "Screenshot", path: "D:\\Screenshot"}
+      system_menu: true
       power_menu: false
       blur: false
-      round_corners: false
+      round_corners: true
       round_corners_type: "normal"
       distance: 5
       container_padding: 
@@ -440,3 +443,4 @@ widgets:
         class_name: "system-widget"
         callbacks:
           on_left: "exec start_menu"
+          on_right: "exec home_menu"
