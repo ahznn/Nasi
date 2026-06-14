@@ -1,0 +1,1049 @@
+@import url("C:/Users/Hamuko/.cache/wal/colors.css");
+
+/*VARIABLES AND SOME DEFAULT SETTINGS*/
+:root {
+    --hover: var(--color5);
+    --bg: var(--color6);
+    --bg2: var(--color9);
+    --Text: var(--color1);
+    --Text2: var(--color1);
+    --border: var(--color1);
+}
+
+* {
+    font-size: 12px;
+    color: var(--Text);
+    font-weight: 600;
+    font-family: "JetBrainsMono NFP";
+}
+
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg);
+}
+
+/* Global context menu style */
+
+.context-menu,
+.context-menu .menu-checkbox {
+    background-color: var(--bg);
+    padding: 4px 0px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-family: 'JetBrainsMono NFP';
+    font-size: 12px;
+    color: var(--Text)
+}
+.context-menu::right-arrow {
+    width: 8px;
+    height: 8px;
+    padding-right: 24px;
+}
+.context-menu::item,
+.context-menu .menu-checkbox {
+    background-color: transparent;
+    padding: 6px 12px;
+    margin: 2px 6px;
+    border-radius: 5px;
+    min-width: 100px;
+}
+
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+    background-color: var(--hover);
+    color: var(--Text);
+    border: 1 solid var(--border);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.context-menu::separator {
+    height: 0px;
+    background-color: var(--bg);
+}
+.context-menu::item:disabled {
+    color: var(--Text);
+    font-size: 12px;
+    background-color: transparent;
+}
+
+.context-menu .menu-checkbox .checkbox {
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    margin: 0;
+    color: var(--Text);
+    font-family: 'JetBrainsMono NFP'
+}
+.context-menu .submenu::item:disabled {
+    margin: 0;
+    padding-left: 16px;
+    font-size: 12px;
+}
+.context-menu .menu-checkbox .checkbox:unchecked {
+    color: var(--Text)
+}
+.context-menu .menu-checkbox .checkbox::indicator {
+    width: 12px;
+    height: 12px;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+    background: var(--bg);
+    border-radius: 5px;
+    height: 4px;
+    width: 4px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:checked {
+    background: var(--Text);
+    border-radius: 5px;
+    height: 4px;
+    width: 4px;
+}
+.context-menu .menu-checkbox .checkbox:focus {
+    outline: none;
+}
+
+.widget {
+    padding: 0 12px;
+    margin: 0;
+}
+
+.icon {
+    font-size: 16px;
+}
+
+.widget .label {
+    padding: 0px 2px;
+}
+
+.apps-widget {
+    padding: 0 4px 0 2px;
+}
+
+.komorebi-active-layout {
+    padding: 0 4px 0 0;
+}
+
+.komorebi-active-layout .label {
+    font-weight: 600;
+    padding: 2px 0 0 0;
+    /* CHANGED: Make layout label pop */
+    color: var(--Text);
+}
+
+/* WIDGET CONTAINERS - These get colors from your script now */
+.apps-widget .widget-container,
+.komorebi-workspaces .widget-container,
+.komorebi-active-layout .widget-container {
+    background-color: var(--hover);
+    margin: 4px 0 4px 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 0 8px;
+}
+
+.komorebi-workspaces .widget-container {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    margin-left: 4px;
+}
+
+.komorebi-workspaces {
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    padding: 0 4px 0 0;
+}
+
+.komorebi-workspaces .offline-status {
+    color: var(--hover);
+    font-size: 12px;
+    padding: 0 0 0 4px;
+    font-weight: 600;
+}
+
+.komorebi-workspaces .ws-btn {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    font-size: 12px;
+    /* This is the color for empty workspaces */
+    color: var(--Text) !important;
+    height: 28px;
+    width: 18px;
+}
+
+.komorebi-workspaces .ws-btn:hover {
+    color: var(--Text) !important;
+}
+
+.komorebi-workspaces .ws-btn.populated {
+    color: transparent !important;
+    width: 10px !important;
+    height: 10px !important;
+
+    /* CHANGE: Using 50% ensures a perfect circle */
+    border-radius: 5px !important;
+
+    /* CHANGE: Using Text so it matches your other widgets */
+    background-color: var(--Text) !important;
+    margin: 0 4px !important;
+}
+
+.komorebi-workspaces .ws-btn.active {
+    color: transparent !important;
+    background-color: var(--Text) !important;
+    /* This pill shape is already rounded at 5px for its 10px height */
+    width: 36px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+.layout-widget {
+    padding: 0 0px 0 0px;
+    background: transparent;
+
+}
+
+.show-desktop-widget {
+    background: transparent;
+    padding: 1 4px 0 0px
+}
+
+.wallpapers-widget {
+    padding: 0 0px 0 12px;
+    background: transparent;
+}
+.wallpapers-gallery-window {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+.wallpapers-gallery-buttons {
+    font-size: 12px;
+    font-family: 'JetBrainsMono NFP';
+    background-color: var(--hover);
+    color: var(--Text);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    padding: 8px 0px;
+    margin:8px 8px 8px 8px;
+    width: 600px;
+    border-radius: 5px;
+}
+.wallpapers-gallery-buttons:hover {
+    background-color: var(--bg);
+    color: var(--Text);
+}
+.wallpapers-gallery-image {
+    border:1px solid var(--bg);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.wallpapers-gallery-image:hover {
+    border: 4px solid var(--border);
+    border-radius: 5px;
+}
+
+.apps-widget .label {
+    font-size: 14px;
+    padding: 0 2px;
+    /* Ensure this is using your theme accent */
+    color: var(--Text) !important;
+}
+
+.apps-widget .label:hover {
+    color: var(--Text);
+}
+
+.uptime {
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* CHANGED: Was hover (dark). Now Text for visibility */
+    color: var(--Text);
+    font-weight: 600;
+}
+
+.power-menu-widget .label {
+    /* CHANGED: Text is usually brighter than Text in Pywal */
+    color: var(--Text);
+    background: transparent;
+    font-size: 13px;
+    padding: 0 0 0 2px;
+}
+
+.power-menu-popup {
+    background-color: transparent;
+}
+
+.power-menu-popup .button {
+    padding: 0;
+    width: 180px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: var(--bg);
+    color: var(--text);
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin: 0px;
+}
+
+.power-menu-popup .button.hover {
+    background-color: var(--hover);
+    border-color: var(--hover);
+}
+
+.power-menu-popup .button .label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Text);
+}
+
+.power-menu-popup .button .icon {
+    font-size: 64px;
+    padding-top: 32px;
+    color: var(--Text);
+}
+
+.power-menu-popup .button.cancel .icon {
+    padding: 0;
+    margin: 0;
+}
+
+.power-menu-popup .button.cancel .label {
+    color: var(--Text);
+    margin: 0;
+}
+
+.power-menu-popup .button.cancel {
+    height: 32px;
+    border-radius: 4px;
+}
+
+.volume-widget .icon {
+    color: var(--Text);
+    margin: 1px 2px 0 0;
+}
+
+.volume-widget .label {
+    color: var(--Text);
+    margin: 1px 2px 0 0;
+}
+
+.audio-menu {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.audio-container .device.selected {
+    background-color: var(--hover);
+    color: var(--Text);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.github-widget .icon {
+    font-size: 14px;
+    color: var(--Text);
+}
+
+.github-widget .icon.new-notification {
+    color: var(--Text);
+}
+
+.weather-widget,
+.github-widget,
+.volume-widget {
+    padding: 0 6 0 0px;
+}
+
+/* WIFI MENU */
+.wifi-widget {
+    background: transparent;
+    padding: 2 12px 0 0px;
+}
+.wifi-menu {
+    font-family: 'Segoe UI';
+    background-color: var(--bg);
+    max-height: 350px;
+    min-height: 375px;
+    min-width: 375px;
+    border: 1px solid var(--hover);
+}
+
+.wifi-menu .progress-bar {
+    max-height: 2px;
+}
+
+.wifi-menu .progress-bar::chunk {
+    background-color: var(--sapphire);
+}
+
+.wifi-menu .header {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--bg);
+    color: var(--Text);
+    border-bottom: 1px solid var(--hover);
+}
+
+.wifi-menu .error-message {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--Text);
+    color: var(--bg);
+    border-bottom: 1px solid var(--hover);
+}
+
+.wifi-menu .wifi-list {
+    background-color: var(--bg);
+    margin-right: 3px;
+}
+
+.wifi-menu .wifi-item {
+    min-height: 35px;
+    padding: 2px 12px;
+    margin: 2px 4px;
+}
+
+.wifi-menu .wifi-item:hover {
+    background-color: var(--hover);
+    border-radius: 6px;
+}
+
+.wifi-menu .wifi-item[active=true] {
+    background-color: var(--hover);
+    font-size: 14px;
+    border-radius: 6px;
+    min-height: 80px;
+}
+
+.wifi-menu .wifi-item .icon {
+    font-family: 'Segoe Fluent Icons';
+    font-size: 26px;
+    margin-right: 10px;
+    color: var(--Text);
+}
+
+.wifi-menu .wifi-item .name {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    margin-right: 10px;
+    color: var(--Text);
+}
+
+.wifi-menu .wifi-item .password {
+    font-family: 'Segoe UI';
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--Text);
+}
+
+.wifi-menu .wifi-item .status {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    color: var(--Text);
+}
+
+.wifi-menu .wifi-item .strength {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    color: var(--Text);
+}
+
+.wifi-menu .wifi-item .controls-container {
+    padding-top: 8px;
+}
+
+.wifi-menu .wifi-item .connect {
+    background-color: var(--hover);
+    color: var(--Text);
+    padding: 4px 30px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .connect:hover {
+    background-color: var(--hover);
+}
+
+.wifi-menu .wifi-item .connect:pressed {
+    background-color: var(--hover);
+}
+
+.wifi-menu .footer {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px;
+    margin-top: 2px;
+    color: var(--Text);
+    background-color: var(--bg);
+    border-top: 1px solid var(--hover);
+}
+
+.wifi-menu .footer .settings-button {
+    font-family: 'Segoe UI';
+    background-color: transparent;
+    border: none;
+    padding: 0 2px;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--Text);
+}
+
+.wifi-menu .footer .refresh-icon {
+    font-family: 'Segoe Fluent Icons';
+    background-color: transparent;
+    border: none;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--text);
+}
+
+.wifi-menu .footer .refresh-icon:hover {
+    background-color: var(--hover);
+    border-radius: 4px;
+}
+
+/* --- WIDGET COLORS --- */
+/* UPDATED to use brighter/lighter colors */
+
+.memory .recycle-bin-widget .label {
+    color: var(--Text);
+}
+
+.recycle-bin-widget .icon {
+    color: var(--Text);
+}
+
+.recycle-bin-widget .label {
+    color: var(--Text);
+}
+
+.clock-widget .label {
+    /* Keeping this Text as you requested */
+    color: var(--Text);
+    padding: 0 0 0 0
+}
+
+.apps-widget .label {
+    /* CHANGED: Was Text. Text matches clock. */
+    color: var(--Text);
+}
+
+.memory-widget .icon {
+    color: var(--Text);
+}
+
+.memory-widget .label {
+    /* CHANGED: Maroon is dark. Text is bright. */
+    color: var(--Text);
+}
+
+.wifi-widget .icon {
+    /* CHANGED: Mauve can be dark. Text pops. */
+    color: var(--Text);
+}
+
+.weather-widget .icon {
+    color: var(--Text);
+}
+
+.weather-widget .label {
+    color: var(--Text);
+}
+
+/* WEATHER CARD */
+.weather-card {
+    background-color: var(--bg);
+    border: 1px solid var(--hover);
+}
+
+.weather-card-today {
+    border: 1px solid var(--hover);
+    border-radius: 8px;
+    background-color: var(--bg);
+}
+
+.weather-card-today .label {
+    font-size: 12px;
+    color: var(--Text);
+}
+
+.weather-card-today .label.location {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Text);
+}
+
+.weather-card-today .label.alert {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: var(--hover);
+    border: 1px solid var(--Text);
+    color: var(--Text);
+    border-radius: 6px;
+    padding: 5px 0;
+}
+
+.weather-card-day {
+    border: 1px solid var(--hover);
+    border-radius: 8px;
+    background-color: var(--bg);
+}
+
+.weather-card-day.active {
+    background-color: var(--hover);
+    border: 1px solid var(--Text);
+}
+
+.weather-card-day:hover {
+    background-color: var(--hover);
+}
+
+.weather-card-day .label {
+    font-size: 12px;
+    color: var(--Text);
+}
+
+.weather-card .hourly-container {
+    border: 1px solid var(--hover);
+    background-color: var(--bg);
+    border-radius: 8px;
+    min-height: 150px;
+}
+
+.weather-card .hourly-data {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--Text);
+}
+
+.weather-card .hourly-data.temperature {
+    background-color: var(--Text);
+}
+
+.weather-card .hourly-data.rain {
+    background-color: var(--Text);
+}
+
+.weather-card .hourly-data.snow {
+    background-color: var(--Text);
+}
+
+.weather-card .hourly-data .hourly-rain-animation {
+    color: var(--Text);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.weather-card .hourly-data .hourly-snow-animation {
+    color: var(--Text);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.weather-card .hourly-data-buttons {
+    margin: 0px;
+}
+
+.weather-card .hourly-data-button {
+    border-radius: 4px;
+    min-height: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    font-size: 14px;
+    color: var(--overlay0);
+    border: 1px solid transparent;
+}
+
+.weather-card .hourly-data-button.active {
+    color: var(--Text);
+    background-color: var(--hover);
+    border: 1px solid var(--hover);
+}
+
+.taskbar-widget {
+    padding: 0 0 0 0;
+    border: none;
+    border-radius: 12px;
+}
+
+.taskbar-widget .widget-container {
+    background-color: var(--hover);
+    margin: 4px 0px 4px 0px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    padding: 0 8px 0 8px;
+}
+
+.taskbar-widget .app-container {
+    border: 0 solid var(--text);
+    border-radius: 12px;
+    margin: 2px 2px 2px 2px
+}
+
+.taskbar-widget .app-container.foreground {
+    margin: 1px 2px 1px 2px;
+    color: var(--bg);
+    background-color: var(--Text);
+    border: 1px solid var(--Text);
+    border-radius: 5px;
+}
+
+.taskbar-widget .app-container.flashing {
+    color: var(--Text);
+    background-color: var(--Text);
+    border-radius: 5px;
+    border-color: var(--border);
+}
+
+
+.taskbar-widget .app-container:hover {
+    background-color: var(--bg);
+    border-color: var(--border);
+    color: var(--Text);
+    border-radius: 5px;
+}
+
+.taskbar-widget .app-container.running {
+    background-color: var(--hover);
+    margin: 1px 5px 1px 5px
+}
+
+.taskbar-widget .app-container.running:hover{
+    color: var(--Text);
+    margin: 1px 2px 1px 2px;
+    background-color: var(--bg);
+    border-color: var(--border);
+    border-radius: 5px;
+}
+
+/* Taskbar preview popup is very limited in styling options, do not use margins/paddings here */
+.taskbar-preview {
+    background-color: var(--bg); 
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+.taskbar-preview.flashing { 
+    background-color:var(--hover);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+
+.taskbar-preview .header {
+    padding-bottom: 12px;
+    padding-top: 4px;
+}
+.taskbar-preview .header .title {
+    color: var(--Text);
+    font-family: "JetBrainsMono NFP";
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+/* --- UPDATED UPDATE-CHECK-WIDGET --- */
+.update-check-widget {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.update-check-widget .icon {
+    font-size: 14px;
+}
+
+.update-check-widget .widget-container.winget,
+.update-check-widget .widget-container.windows {
+    /* Using your original margin/radius logic for 'perfect pillness' */
+    background: var(--Text) !important;
+    margin: 7px 2px;
+    border-radius: 9px;
+    border: 1px solid var(--Text);
+    /* Matches background for a seamless pill */
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+}
+
+/* Ensure the Windows container also uses the Text theme */
+.update-check-widget .widget-container.windows {
+    background: var(--Text) !important;
+    border: 1px solid var(--Text) !important;
+}
+
+.update-check-widget .widget-container.winget .icon,
+.update-check-widget .widget-container.windows .icon {
+    color: var(--bg) !important;
+    margin: 0 1px 0 6px;
+}
+
+.update-check-widget .widget-container.winget .label,
+.update-check-widget .widget-container.windows .label {
+    margin: 0 6px 0 1px;
+    color: var(--bg) !important;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.home-widget{
+    padding: 0 0 0 0;
+}
+
+.home-widget .icon {
+    color: var(--Text) !important;
+}
+
+.home-widget .icon :hover {
+    color: var(--bg) !important;
+}
+
+.home-menu {
+    /* CHANGE: Fixed typo from --lavendera to --bg or --bg */
+    background-color: var(--bg) !important;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.home-menu .menu-item {
+    padding: 8px 48px 9px 16px;
+    font-size: 12px;
+    font-family: 'Segoe UI';
+    color: var(--Text);
+    font-weight: 600;
+}
+
+.home-menu .menu-item:hover {
+    background-color: var(--hover);
+    color: var(--Text);
+}
+
+.home-menu .separator {
+    max-height: 1px;
+    background-color: var(--border);
+}
+
+/* MEDIA WIDGET */
+.media-widget {
+    background-color: var(--bg);
+    padding: 0 0 0 0;
+}
+.media-widget .label {
+    font-family: JetBrainsMono NFP;
+    font-size: 12px;
+    color: var(--Text);
+    background-color: var(--hover);
+    margin: 4px 0 4px 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0 8px
+
+}
+.media-widget .btn {
+    color: var(--Text);
+    padding-left: -20px;
+}
+
+/*MEDIA POPUP*/
+.media-menu {
+  min-width: 416px;
+  max-width: 416px;
+  background-color: var(--bg);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+.media-menu .thumbnail {
+  border: 0px solid var(--bg);
+  border-radius: 5px;
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+  font-size: 12px;
+  font-family: JetBrainsMono NFP;
+  color: var(--Text);
+  margin-left: 10px;
+}
+.media-menu .artist {
+  font-size: 12px;
+  color: var(--Text);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.media-menu .source {
+  font-size: 12px;
+  color: var(--Text);
+  font-family: JetBrainsMono NFP;
+  border-radius: 5px;
+  background-color: var(--Text);
+  padding: 2px 6px;
+}
+.media-menu .source.firefox {
+  background-color: #ff583b;
+  color: #e5e7eb;
+}
+.media-menu .source.spotify {
+  background-color: #199143;
+  color: #e5e7eb;
+}
+.media-menu .source.edge {
+  background-color: #0078d4;
+  color: #e5e7eb;
+}
+.media-menu .source.windows-media {
+  background-color: #0078d4;
+  color: #e5e7eb;
+}
+.media-menu .btn {
+  font-family: "Segoe Fluent Icons";
+  font-size: 12px;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  color: var(--Text);
+}
+.media-menu .btn.prev {
+  margin-left: 10px;
+  color: var(--Text);
+}
+.media-menu .btn:hover {
+  background-color: transparent;
+}
+.media-menu .btn.play {
+  background-color: var(--bg);
+  font-size: 20px;
+}
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+  color: var(--Text);
+  background-color: rgba(0, 0, 0, 0);
+}
+.media-menu .playback-time {
+  font-size: 12px;
+  font-family: Arial;
+  color: var(--Text);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  min-width: 100px;
+}
+.media-menu .progress-slider {
+  height: 5px;
+  border-radius: 5px;
+  background-color: var(--bg);
+}
+.media-menu .progress-slider::groove {
+  height: 4px;
+  border-radius: 5px;
+  color: var(--Text);
+}
+.media-menu .progress-slider::groove:hover {
+  height: 6px;
+  border-radius: 5px;
+}
+.media-menu .progress-slider::sub-page {
+  background: var(--Text);
+  border-radius: 5px;
+  height: 4px;
+}
+
+/* CALENDAR */
+.calendar {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+    background-color: transparent;
+    color: var(--Text);
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.calendar .calendar-table::item:selected {
+    color: var(--bg);
+    background-color: var(--Text);
+    border-radius: 10px;
+}
+
+.calendar .day-label {
+    margin-top: 20px;
+}
+
+.calendar .day-label,
+.calendar .month-label,
+.calendar .date-label,
+.calendar .week-label {
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    color: var(--Text);
+    font-weight: 700;
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.calendar .week-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--Text);
+}
+
+.calendar .holiday-label {
+    color: var(--hover);
+    font-weight: 700;
+}
+
+.calendar .month-label {
+    font-weight: normal;
+}
+
+.calendar .date-label {
+    font-size: 88px;
+    font-weight: 900;
+    color: var(--Text);
+    margin-top: -20px;
+}
+
+.active-window-widget .widget-container .label {
+    color: var(--Text);
+}
+
+/*SYSTEM TRAY*/
+.systray {
+    padding-left: 0px;
+}
+
+.systray .button {
+  background: transparent; 
+  border-radius: 5px;
+  padding: 2px 2px;
+}
+
+.systray .unpinned-visibility-btn {
+  color: var(--Text);
+  font-family: "Segoe Fluent Icons";
+  font-size: 16px;
+  border-radius: 5px;
+  height: 20px;
+  width: 16px;
+}
