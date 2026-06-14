@@ -1,0 +1,506 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ['*']
+    class_name: "yasb-bar"
+    alignment:
+      position: "bottom"
+      center: false
+    blur_effect:
+      enabled: true
+      acrylic: false
+      dark_mode: true
+      round_corners: false
+      border_color: None
+    window_flags:
+      always_on_top: true
+      windows_app_bar: true
+      hide_on_fullscreen: true
+    dimensions:
+      width: "100%"
+      height: 32
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left: ["win_button", "komorebi_workspaces", "komorebi_active_layout", "home", "active_window", "apps"]
+      center: ["clock", "weather", "taskbar",]
+      right:
+        [
+          "media",
+          "bin",
+          "systray",
+          "volume",
+          "wifi",
+          "layout",
+          "wallpapers",
+          "power_menu",
+          "show_desktop"
+        ]
+widgets:
+  bin:
+    type: "yasb.recycle_bin.RecycleBinWidget"
+    options:
+      label: "{icon} Items {items_count} ({items_size})"
+      label_alt: "{icon} {items_size}"
+      icons:
+        bin_empty: "\udb82\ude7a"
+        bin_filled: "\udb82\ude79"
+      callbacks:
+        on_left: "open_bin"
+        on_right: "toggle_label"
+        on_middle: "empty_bin"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>\uf4bc</span> {virtual_mem_free}/{virtual_mem_total}"
+      label_alt: "<span>\uf4bc</span> VIRT: {virtual_mem_percent}% SWAP: {swap_mem_percent}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+      histogram_icons:
+        - "\u2581"
+        - "\u2581"
+        - "\u2582"
+        - "\u2583"
+        - "\u2584"
+        - "\u2585"
+        - "\u2586"
+        - "\u2587"
+        - "\u2588"
+      label_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\ue8a9"
+      label_expanded: "\ue76c"
+      icon_size: 12
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: false
+      show_volume: false
+      show_network: false
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+  layout:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "\udb82\udeb8"  # Icon for the button
+      class_name: "layout-widget"
+      callbacks:
+        on_left: exec cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !LoadLayout "LessCluttered"
+        on_middle: exec cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !LoadLayout "Cluttered"
+        on_right: exec cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !LoadLayout "Clear"
+  show_desktop:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "\uf4a9"  # Icon for the button
+      class_name: "show-desktop-widget"
+      callbacks:
+        on_left: "exec powershell -command \"(New-Object -ComObject shell.application).toggleDesktop()\""
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "{wifi_name} {wifi_strength}%"
+      update_interval: 5000
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "toggle_label"
+      ethernet_label: "<span>{wifi_icon}</span>"
+      ethernet_label_alt: "<span>{wifi_icon}</span>"
+      ethernet_icon: "\ueba9"
+      get_exact_wifi_strength: false
+      wifi_icons:
+        [
+          "\udb82\udd2e",
+          "\udb82\udd1f",
+          "\udb82\udd22",
+          "\udb82\udd25",
+          "\udb82\udd28",
+        ]
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "up"
+        offset_top: 6
+        offset_left: 0
+        wifi_icons_secured: ["\ue670", "\ue671", "\ue672", "\ue673"]
+        wifi_icons_unsecured: ["\uec3c", "\uec3d", "\uec3e", "\uec3f"]
+  media:
+      type: "yasb.media.MediaWidget"
+      options:
+        label: "{artist} - {title}"
+        label_alt: "{artist}"
+        callbacks:
+          on_left: "toggle_media_menu"
+          on_middle: "do_nothing"
+          on_right: "toggle_label"
+        max_field_size:
+          label: 25
+          label_alt: 25
+        show_thumbnail: false
+        controls_only: false
+        controls_left: true
+        hide_empty: false
+        thumbnail_alpha: 250
+        thumbnail_padding: 8
+        thumbnail_corner_radius: 6
+        icons:
+          prev_track: ""
+          next_track: ""
+          play: "<span>\uf001</span>"
+          pause: "<span>\uf001</span>"
+        media_menu:
+          blur: false
+          round_corners: true
+          round_corners_type: "round"
+          alignment: "center"
+          direction: "up"
+          offset_top: 5
+          offset_left: 0
+          thumbnail_size: 100
+          thumbnail_corner_radius: 10
+          max_title_size: 45
+          max_artist_size: 50
+          show_source: true
+        media_menu_icons:
+          play: "\ue768"
+          pause: "\ue769"
+          prev_track: "\ue892"
+          next_track: "\ue893"
+  update:
+    type: "yasb.update_check.UpdateCheckWidget"
+    options:
+      winget_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 30
+        exclude: []
+      windows_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 240
+        exclude: []
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 32
+      max_length_ellipsis: "..."
+      monitor_exclusive: false
+  home:
+    type: "yasb.home.HomeWidget"
+    options:
+      label: ">.<"
+      menu_list:
+      - { title: "Home", path: "~" }
+      - { title: "Downloads", path: "D:\\Download D"}
+      - { title: "Documents", path: "C:\\Users\\Hamuko\\Documents"}
+      - { title: "yt-dlp", path: "D:\\yt-dlp"}
+      - { title: "Screenshot", path: "D:\\Screenshot"}
+      system_menu: true
+      power_menu: false
+      blur: false
+      round_corners: true
+      round_corners_type: "normal"
+      distance: 5
+      container_padding: 
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      alignment: "left"
+      direction: "up"
+      menu_labels:
+        shutdown: "Shutdown"
+        restart: "Restart"
+        logout: "Logout"
+        lock: "Lock"
+        sleep: "Sleep"
+        system: "System Settings"
+        about: "About This PC"
+        task_manager: "Task Manager"
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a, %d %b %I:%M %p}"
+      label_alt: "{%A, %d %B %Y %I:%M:%S %p}"
+      timezones: []
+      calendar:
+        alignment: "center"
+        direction: "up"
+        offset_top: 6
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "\u23fc Offline"
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: ""
+      label_workspace_populated_btn: "\udb81\udc3e"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: true
+      animation: true
+  komorebi_active_layout:
+    type: "komorebi.active_layout.ActiveLayoutWidget"
+    options:
+      hide_if_offline: true
+      label: "{layout_name}"
+      layouts: ['bsp', 'columns', 'rows', 'grid', 'vertical_stack', 'horizontal_stack', 'ultrawide_vertical_stack','right_main_vertical_stack']
+      layout_icons:
+        bsp: "\uebeb"
+        columns: "\uebf7"
+        rows: "\uec01"
+        grid: "\udb81\udf58"
+        vertical_stack: "\uebee"
+        horizontal_stack: "\uebf0"
+        ultrawide_vertical_stack: "\uebee"
+        right_main_vertical_stack: "\uebf1"
+        monocle: "\uf06f"
+        maximized: "\uf06f"
+        floating: "\uf2d2"
+        paused: "\udb83\udf89"
+        tiling: "\udb81\ude40"
+      callbacks:
+        on_left: 'toggle_layout_menu'
+        on_middle: 'next_layout'
+        on_right: 'prev_layout'
+      layout_menu:
+        blur: false
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "left"
+        direction: "up"
+        offset_top: 5
+        offset_left: 0
+        show_layout_icons: false
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      api_key: "09a21e791b7e4969b0505158260906"
+      show_alerts: true
+      tooltip: true
+      update_interval: 600
+      hide_decimal: true
+      units: "metric"
+      location: "Jepara, Jawa Tengah, Indonesia"
+      callbacks:
+        on_left: "toggle_card"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
+      icons:
+        sunnyDay: "\ue30d"
+        clearNight: "\ue32b"
+        cloudyDay: "\ue312"
+        cloudyNight: "\ue311"
+        rainyDay: "\ue308"
+        rainyNight: "\ue333"
+        snowyDay: "\ue30a"
+        snowyNight: "\ue335"
+        blizzardDay: "\udb83\udf36"
+        blizzardNight: "\udb83\udf36"
+        foggyDay: "\ue303"
+        foggyNight: "\ue346"
+        thunderstormDay: "\ue30f"
+        thunderstormNight: "\ue338"
+        default: "\uebaa"
+      weather_card:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "center"
+        direction: "up"
+        icon_size: 64
+        show_hourly_forecast: true
+        time_format: "24h"
+        hourly_point_spacing: 76
+        hourly_icon_size: 32
+        icon_smoothing: true
+        temp_line_width: 2
+        current_line_color: "#8EAEE8"
+        current_line_width: 1
+        current_line_style: "dot"
+        hourly_gradient:
+          enabled: false
+          top_color: "#8EAEE8"
+          bottom_color: "#2A3E68"
+        hourly_forecast_buttons:
+          enabled: true
+          default_view: "temperature"
+          temperature_icon: "\udb81\udd99"
+          rain_icon: "\udb81\udd96"
+          snow_icon: "\udb81\udd98"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"  # Icon for muted
+        - "\uf026"  # Icon for 0-10% volume
+        - "\uf027"  # Icon for 11-30% volume
+        - "\uf027"  # Icon for 31-60% volume
+        - "\uf028"  # Icon for 61-100% volume
+      audio_menu:
+        direction: "up"
+        show_apps: true
+        show_apps_expanded: false
+        show_app_labels: true
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  win_button:
+      type: "yasb.custom.CustomWidget"
+      options:
+        label: "<span>\uf192</span>"
+        label_alt: "<span>\uf192</span>"
+        class_name: "system-widget"
+        callbacks:
+          on_left: "exec start_menu"
+          on_right: "exec home_menu"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 200
+      button_row: 5
+      buttons:
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        signout: ["\udb80\udf43", "Sign out"]
+        hibernate: ["\uf28e", "Hibernate"]
+        sleep: ["\u23fe", "Sleep"]
+        cancel: ["", "Cancel"]
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - { icon: "\uf0a2", launch: "notification_center" }
+        - { icon: "\ue705", launch: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Adobe After Effects 2023.lnk" }
+        - { icon: "\uf489", launch: "wt" }
+        - {
+            icon: "\udb80\ude39",
+            launch: "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Firefox.lnk",
+          }
+        - {
+            icon: "\udb82\ude1e",
+            launch: "C:\\Users\\Hamuko\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
+          }
+        - { icon: "\udb83\udc93", launch: "cmd /c komorebic start --whkd --masir" }
+        - { icon: "\udb84\udeda", launch: "cmd /c komorebic stop --whkd --masir" }
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      icon_size: 14
+      tooltip: true
+      show_only_visible: true
+      strict_filtering: false
+      monitor_exclusive: true
+      animation:
+        enabled: true
+      preview:
+        enabled: true
+        width: 240
+        delay: 400
+        padding: 8
+        margin: 8
+      title_label:
+        enabled: false
+        show: "focused"
+        min_length: 6
+        max_length: 12
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\udb83\ude09</span>"
+      image_path: "C:\\Users\\Hamuko\\Documents\\Wallpaper"
+      change_automatically: false
+      update_interval: 60
+      animation:
+        enabled: true
+        type: 'fadeInOut'
+        duration: 200      
+      gallery:
+        enabled: true
+        blur: false
+        image_width: 300
+        image_per_page: 6
+        show_buttons: true
+        orientation: "portrait"
+        image_spacing: 11
+        lazy_load: true
+        lazy_load_delay: 10
+        lazy_load_fadein: 200
+        image_corner_radius: 4
+        enable_cache: true
+      run_after: [
+        "cmd.exe /c start /min pwsh -WindowStyle Hidden -Command Update-WalTheme -Backend haishoku",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\Hamuko\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\convert.ps1",
+        cmd.exe /c start /min /D "C:\Program Files\Rainmeter" Rainmeter.exe !RefreshApp,
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\Hamuko\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\accenttheme.ps1",
+        cmd.exe /c start /min pwsh.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\Hamuko\Documents\Rainmeter\Skins\Bouquet Suite II\@Resources\Scripts\komorebi.ps1"
+      ]
